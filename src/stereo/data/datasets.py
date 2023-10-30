@@ -509,18 +509,6 @@ class GeneRegPseudotimeDataset(GeneRegMixin):
                 x = x[genes_to_keep]
             self.x_seq.append(torch.from_numpy(x).float())
 
-        # Remove genes with a zero-row at any time point
-        # nonz_to_keep = np.full(self.x_seq[0].shape[0], True)
-        # for x in self.x_seq:
-        #     nonz_to_keep[torch.all(x == 0, dim=1)] = False
-        # n_to_remove = (~nonz_to_keep).sum()
-
-        # if n_to_remove > 0:
-        #     print(f"Removing {n_to_remove} zero rows.")
-        #     for i in range(len(self.x_seq)):
-        #         self.x_seq[i] = self.x_seq[i][nonz_to_keep]
-        #     self.genes = self.genes[nonz_to_keep]
-
         if normalize:
             self.x_seq = [self.normalize_samples(x) for x in self.x_seq]
             self.x_seq = [torch.from_numpy(x).float() for x in self.x_seq]
