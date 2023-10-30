@@ -1,0 +1,9 @@
+defaults:
+ - _self_
+ - model_kwargs: autoreg-one-layer
+
+clip_A: true
+l1_lambda: 0.005
+
+optim_fn_kwargs:
+  lr: 0.01

@@ -1,0 +1,2 @@
+reg_lambda: 0.001
+kernel_bandwidth: 5.0

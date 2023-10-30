@@ -1,0 +1,16 @@
+name: HubSimulatedData
+savepath: data/simulation/max-simulation.pkl
+seed: 1
+
+kwargs:
+  n_nodes: 100
+  n_features: 100
+  n_hubs: 10
+  min_n_hubs_per_trg: 3
+  max_n_hubs_per_trg: 3
+  n_seq: 5
+  x_init: "random"
+  preserve_hubs: true
+  edge_prob: 0.05
+  normalize: false
+  logical_nonlin: max

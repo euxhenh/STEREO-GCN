@@ -1,0 +1,23 @@
+defaults:
+  - _self_
+  - model_kwargs: stereo-two-layer-normalize
+
+inner_loops: 10
+inner_loss_fn: MSELoss
+inner_optim_fn: Adam
+inner_optim_fn_kwargs:
+  lr: 0.001
+  weight_decay: 0.001
+outer_optim_fn_kwargs:
+  lr: 0.005
+global_l1_lambda: 0.005
+smoothness_lambda: 10.0
+clear_nan: true
+
+clip_A: true
+adj_kwargs:
+  init_edge_weights: trunc_normal
+
+apply_hier_prox: false
+
+log_A_every_k_epochs: 10

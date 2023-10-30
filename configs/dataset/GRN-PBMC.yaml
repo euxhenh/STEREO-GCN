@@ -1,0 +1,9 @@
+name: PBMCGeneRegPseudotimeDataset
+
+kwargs:
+  highly_variable: false
+  n_features: 32
+  name: ys_pbmc_deg4_
+  adata_path: data/adatas/PBMC_vaccine_CITE_covid.h5ad
+  n_seq: 4
+  targets_only: true

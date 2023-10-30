@@ -1,0 +1,29 @@
+defaults:
+  - _self_
+  - model_kwargs: stereo-two-layer
+
+inner_loops: 10
+inner_loss_fn: MSELoss
+inner_optim_fn: Adam
+inner_optim_fn_kwargs:
+  lr: 0.001
+outer_optim_fn_kwargs:
+  lr: 0.005
+smoothness_lambda: 1.0
+
+clip_A: false
+low_rank_mode: false
+adj_kwargs:
+  init_edge_weights: glorot
+
+apply_hier_prox: true
+hier_prox_kwargs:
+  min_n_nonzero: 20  # set to >= n_features
+  soft_lambda: 1.0
+  M: 5.0
+  path_multiplier: 0.01
+  warm_epochs: 30
+  run_every_n: 1
+
+log_A_every_k_epochs: false
+save_A_seq: false

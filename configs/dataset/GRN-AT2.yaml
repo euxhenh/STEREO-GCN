@@ -1,0 +1,9 @@
+name: GeneRegPseudotimeDataset
+
+kwargs:
+  highly_variable: true
+  keep_snc_markers: true
+  n_features: 32
+  name: ys_hlca_AT2_deg4_
+  adata_path: data/adatas/HLCA_AT2.h5ad
+  n_seq: 6

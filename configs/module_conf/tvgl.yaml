@@ -1,0 +1,4 @@
+alpha: 10.0  # sparsity penalty
+max_iter: 100
+beta: 0.1
+verbose: true

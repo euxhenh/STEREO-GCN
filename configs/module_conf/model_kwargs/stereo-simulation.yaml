@@ -1,0 +1,14 @@
+in_features: null
+out_features: null
+
+n_blocks: 1
+add_input_linear_layer: false
+add_output_linear_layer: true
+add_input_skip_connection: false
+
+unit_kwargs:
+  nonlin: LeakyReLU
+  batch_norm: false
+  gnn_kwargs:
+    normalize: false
+    add_self_loops: false

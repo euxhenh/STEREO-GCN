@@ -1,0 +1,9 @@
+name: GeneRegPseudotimeDataset
+
+kwargs:
+  highly_variable: true
+  keep_snc_markers: true
+  n_features: 32
+  name: ys_hlca_Endothelial_deg4_
+  adata_path: data/adatas/HLCA_Endothelial.h5ad
+  n_seq: 6
